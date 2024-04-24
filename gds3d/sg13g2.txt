@@ -29,6 +29,18 @@ Shortkey: 0		# Defines a shortkey from 0 to 9 to toggle the layer visibility. Ca
 Show: 1			# Shown during rendering
 LayerEnd
 
+LayerStart: Active
+Layer: 1
+Height: -340
+Thickness: 640
+Red: 1.0
+Green: 1.0
+Blue: 0.0
+Filter: 0.0
+Metal: 0
+Show: 1
+LayerEnd
+
 LayerStart: P-Plus
 Layer: 2
 Height: 220
@@ -53,21 +65,9 @@ Metal: 0
 Show: 1
 LayerEnd
 
-LayerStart: Active
-Layer: 1
-Height: 320
-Thickness: 20
-Red: 1.0
-Green: 1.0
-Blue: 0.0
-Filter: 0.0
-Metal: 0
-Show: 1
-LayerEnd
-
-LayerStart: Poly
+LayerStart: GatPoly
 Layer: 5
-Height: 320
+Height: 300
 Thickness: 160
 Red: 0.91
 Green: 0.12
@@ -79,7 +79,7 @@ LayerEnd
 
 LayerStart: Contact
 Layer: 6
-Height: 320
+Height: 300
 Thickness: 640
 Red: 1.0
 Green: 0.9
@@ -91,7 +91,7 @@ LayerEnd
 
 LayerStart: Metal 1
 Layer: 8
-Height: 620
+Height: 940
 Thickness: 420
 Red: 0.0
 Green: 0.0
@@ -102,22 +102,9 @@ Shortkey: 1
 Show: 1
 LayerEnd
 
-LayerStart: Via 1
-Layer: 19
-Height: 770
-Thickness: 540
-Red: 0.50
-Green: 0.0
-Blue: 1.0
-Filter: 0.0
-Metal: 0
-Shortkey: <Shift> 1
-Show: 1
-LayerEnd
-
 LayerStart: Metal 2
 Layer: 10
-Height: 970
+Height: 1900
 Thickness: 490
 Red: 1.0
 Green: 0.0
@@ -128,9 +115,35 @@ Shortkey: 2
 Show: 1
 LayerEnd
 
+LayerStart: pSD
+Layer: 14
+Height: 297.4
+Thickness: 2.65
+Red: 1.0
+Green: 0.0
+Blue: 1.0
+Filter: 0.0
+Metal: 1
+Shortkey: 2
+Show: 1
+LayerEnd
+
+LayerStart: Via 1
+Layer: 19
+Height: 1360
+Thickness: 540
+Red: 0.50
+Green: 0.0
+Blue: 1.0
+Filter: 0.0
+Metal: 0
+Shortkey: <Shift> 1
+Show: 1
+LayerEnd
+
 LayerStart: Via 2
 Layer: 29
-Height: 1220
+Height: 2390
 Thickness: 540
 Red: 0.5
 Green: 0.4
@@ -143,8 +156,125 @@ LayerEnd
 
 LayerStart: Metal 3
 Layer: 30
-Height: 1420
+Height: 2930
 Thickness: 490
+Red: 0.50
+Green: 0.0
+Blue: 1.0
+Filter: 0.0
+Metal: 1
+Shortkey: 3
+Show: 1
+LayerEnd
+
+LayerStart: Nwell
+Layer: 31
+Height: -100
+Thickness: 400
+Red: 0.0
+Green: 0.8
+Blue: 0.4
+Filter: 0.0
+Metal: 1
+Shortkey: 3
+Show: 1
+LayerEnd
+
+LayerStart: MIM
+Layer: 36
+Height: 5520
+Thickness: 150
+Red: 0.50
+Green: 0.0
+Blue: 1.0
+Filter: 0.0
+Metal: 1
+Shortkey: 3
+Show: 1
+LayerEnd
+
+LayerStart: Via3
+Layer: 49
+Height: 3420
+Thickness: 540
+Red: 0.0
+Green: 0.8
+Blue: 0.4
+Filter: 0.0
+Metal: 1
+Shortkey: 3
+Show: 1
+LayerEnd
+
+LayerStart: Metal4
+Layer: 50
+Height: 3960
+Thickness: 490
+Red: 0.50
+Green: 0.0
+Blue: 1.0
+Filter: 0.0
+Metal: 1
+Shortkey: 3
+Show: 1
+LayerEnd
+
+LayerStart: Via4
+Layer: 66
+Height: 4450
+Thickness: 540
+Red: 0.0
+Green: 0.8
+Blue: 0.4
+Filter: 0.0
+Metal: 1
+Shortkey: 3
+Show: 1
+LayerEnd
+
+LayerStart: Metal5
+Layer: 67
+Height: 4990
+Thickness: 490
+Red: 0.50
+Green: 0.0
+Blue: 1.0
+Filter: 0.0
+Metal: 1
+Shortkey: 3
+Show: 1
+LayerEnd
+
+LayerStart: TopVia1
+Layer: 125
+Height: 5480
+Thickness: 850
+Red: 0.0
+Green: 0.8
+Blue: 0.4
+Filter: 0.0
+Metal: 1
+Shortkey: 3
+Show: 1
+LayerEnd
+
+LayerStart: TopMetal1
+Layer: 126
+Height: 6330
+Thickness: 2000
+Red: 0.50
+Green: 0.0
+Blue: 1.0
+Filter: 0.0
+Metal: 1
+Shortkey: 3
+Show: 1
+LayerEnd
+
+LayerStart: Vmim
+Layer: 129
+Height: 5670
+Thickness: 660
 Red: 0.0
 Green: 0.8
 Blue: 0.4
