@@ -48,7 +48,7 @@ This directory contains a definition file for some, but not all, of the layers i
 - Vmim
 
 The layouts have been included in this directory in GDS format for convenience. To view the layouts, follow the following instructions:
-1. Clone the [GDS3D tool](https://github.com/trilomix/GDS3D) to your machine. It does not function in the sg13g2 PDK as of now.
+1. Clone the [GDS3D tool](https://github.com/trilomix/GDS3D) to your machine. It does not function in the sg13g2 PDK Docker container as of now.
 2. Copy the files in the `/gds3d` directory of this repository to the root of the cloned `GDS3D` repository.
 3. Navigate to the `GDS3D` repository in your terminal.
 4. Run the program, passing the technology file and the layout you'd like to view as arguments.
