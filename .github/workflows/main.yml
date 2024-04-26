@@ -1,24 +1,23 @@
 name: Copy README.md
 
-# This workflow is triggered on pushes to the repository.
 on: push
 
 jobs:
   copy-readme-file:
-    name: Copy README.md to Team1.readme
     runs-on: ubuntu-latest
 
+    permissions:
+      # Give the default GITHUB_TOKEN write permission to commit and push the
+      # added or changed files to the repository.
+      contents: write
+
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
 
-    - name: Copy README.md to Team1.readme
-      run: cp README.md Team1.readme
+      - name: Copy README.md to Team1.readme
+        run: cp README.md Team1.readme
 
-    - name: Commit and push if changes
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add Team1.readme
-        git diff --staged --quiet || git commit -m 'Update Team1.readme'
-        git push
+      # Commit all changed files back to the repository
+      - uses: stefanzweifel/git-auto-commit-action@v5
