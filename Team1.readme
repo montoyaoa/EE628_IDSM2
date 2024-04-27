@@ -7,6 +7,9 @@ This modulator is an implementation of the design found in:
 Y. Chae et al., "A 2.1 M Pixels, 120 Frame/s CMOS Image Sensor With Column-Parallel 
 ADC Architecture," in IEEE Journal of Solid-State Circuits, Jan. 2011. https://ieeexplore.ieee.org/document/5641589
 
+## Current Status:
+These are preliminary files with the comparator in need of changes.
+
 ## 📄 Deliverables
 The deliverables for this project all have the filename "Team1":
 - Team1.spice: The SPICE circuit schematic for the ADC, compatible with LVS.
@@ -19,6 +22,18 @@ Individual OASIS layout files are included for the individual components of the 
 - clock_gen.oas: The clock generator, which splits a single clock pulse into four pulses.
 - comparator.oas: The comparator, which determines if the integrated sum of the stages exceeds the input voltage.
 - stage.oas: The integrator, which sums samples of the input voltage.
+
+## Team1 pin list:
+Name   Type     Purpose
+------------------------------------
+vin    input    Analog input of ADC
+dd     output   Digital output of ADC
+res    input    Digital reset signal (active high)
+vdda   supply   Analog supply voltage
+vssa   supply   Ground
+vlo    input    Digital low signal
+vhi    input    Digital high signal
+clkin  input    Clock signal
 
 ## /gds3d
 This directory contains files for 3D visualization of the layouts using the [GDS3D tool](https://github.com/trilomix/GDS3D). 
