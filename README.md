@@ -24,16 +24,16 @@ Individual OASIS layout files are included for the individual components of the 
 - stage.oas: The integrator, which sums samples of the input voltage.
 
 ## Team1 pin list:
-Name   Type     Purpose
-------------------------------------
-vin    input    Analog input of ADC
-dd     output   Digital output of ADC
-res    input    Digital reset signal (active high)
-vdda   supply   Analog supply voltage
-vssa   supply   Ground
-vlo    input    Digital low signal
-vhi    input    Digital high signal
-clkin  input    Clock signal
+Name|Type|Purpose
+---|---|---
+vin|input|Analog input of ADC
+dd|output|Digital output of ADC
+res|input|Digital reset signal (active high)
+vdda|supply|Analog supply voltage
+vssa|supply|Ground
+vlo|input|Digital low signal
+vhi|input|Digital high signal
+clkin|input|Clock signal
 
 ## /gds3d
 This directory contains files for 3D visualization of the layouts using the [GDS3D tool](https://github.com/trilomix/GDS3D). 
