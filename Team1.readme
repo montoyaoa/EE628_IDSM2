@@ -8,7 +8,7 @@ Y. Chae et al., "A 2.1 M Pixels, 120 Frame/s CMOS Image Sensor With Column-Paral
 ADC Architecture," in IEEE Journal of Solid-State Circuits, Jan. 2011. https://ieeexplore.ieee.org/document/5641589
 
 ## Current Status:
-These are preliminary files with the comparator in need of changes.
+These are preliminary files in need of fixes for lvs.
 
 ## 📄 Deliverables
 The deliverables for this project all have the filename "Team1":
