@@ -10,6 +10,18 @@ ADC Architecture," in IEEE Journal of Solid-State Circuits, Jan. 2011. https://i
 ## Current Status:
 These are preliminary files in need of fixes for lvs.
 
+### clock_gen.oas
+All LVS checks pass.
+
+All DRC checks pass with the exception of:
+- aFil.g2
+- GFil.g
+- M2.j
+- M3.j
+- M1Fil.h
+- M2Fil.h
+- M3Fil.h
+
 ## 📄 Deliverables
 The deliverables for this project all have the filename "Team1":
 - Team1.spice: The SPICE circuit schematic for the ADC, compatible with LVS.
