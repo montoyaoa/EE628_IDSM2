@@ -253,7 +253,7 @@ N 1570 -720 1570 -590 {
 lab=#net2}
 N 1570 -590 1740 -590 {
 lab=#net2}
-N 1920 -610 1960 -610 {
+N 1940 -610 1960 -610 {
 lab=dd}
 N 1700 -610 1740 -610 {
 lab=ps}
@@ -269,6 +269,14 @@ N 780 -770 980 -770 {
 lab=out1p}
 N 300 -950 1650 -950 {
 lab=out1m}
+N 1940 -610 1940 -550 {
+lab=dd}
+N 1920 -610 1940 -610 {
+lab=dd}
+N 1940 -550 1960 -550 {
+lab=dd}
+N 2040 -550 2060 -550 {
+lab=dd}
 C {devices/title.sym} 170 0 0 0 {name=l1 author="Alex Montoya"}
 C {devices/ipin.sym} 90 -880 0 0 {name=p1 lab=pc}
 C {devices/ipin.sym} 90 -550 0 0 {name=p2 lab=vinp}
@@ -465,3 +473,6 @@ C {devices/opin.sym} 1960 -610 0 0 {name=p15 lab=dd}
 C {devices/ipin.sym} 1580 -430 0 0 {name=p18 lab=res}
 C {devices/lab_wire.sym} 1700 -610 0 0 {name=p19 sig_type=std_logic lab=ps}
 C {sg13g2_stdcells/sg13g2_inv_1.sym} 1650 -430 0 0 {name=x4 VDD=VDD VSS=VSS prefix=sg13g2_ }
+C {sg13g2_stdcells/sg13g2_inv_2.sym} 2000 -550 0 0 {name=x5 VDD=VDD VSS=VSS prefix=sg13g2_ }
+C {devices/opin.sym} 2060 -550 0 0 {name=p20 lab=dout
+}

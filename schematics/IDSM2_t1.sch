@@ -19,11 +19,7 @@ N 810 -290 860 -290 {
 lab=vout2}
 N 810 -270 860 -270 {
 lab=vmid2}
-N 1070 -270 1110 -270 {
-lab=dd}
-N 1070 -290 1090 -290 {
-lab=#net1}
-N 770 -150 1090 -150 {
+N 770 -150 1180 -150 {
 lab=#net1}
 N 640 -180 950 -180 {
 lab=res}
@@ -46,15 +42,11 @@ lab=p1}
 N 990 -210 990 -90 {
 lab=p2}
 N 520 -210 520 -130 {
-lab=dd}
-N 1110 -270 1110 -130 {
-lab=dd}
+lab=#net2}
 N 770 -210 770 -150 {
 lab=#net1}
-N 1090 -290 1090 -150 {
-lab=#net1}
-N 520 -130 1110 -130 {
-lab=dd}
+N 520 -130 1200 -130 {
+lab=#net2}
 N 430 -210 430 -110 {
 lab=p1}
 N 320 -110 430 -110 {
@@ -113,15 +105,14 @@ N 470 -460 470 -370 {
 lab=vhi}
 N 90 -460 470 -460 {
 lab=vhi}
-N 1110 -270 1130 -270 {
-lab=dd}
 N 90 -130 100 -130 {
 lab=clkin}
+N 1180 -300 1180 -150 {}
+N 1160 -300 1180 -300 {}
+N 1200 -280 1200 -130 {}
+N 1160 -280 1200 -280 {}
+N 1160 -260 1235 -260 {}
 C {devices/title.sym} 170 0 0 0 {name=l1 author="Alex Montoya"}
-C {/foss/designs/week12/comp_t1.sym} 1010 -280 0 0 {name=x1}
-C {/foss/designs/week12/clk_generator_t1.sym} 170 -100 0 0 {name=x2}
-C {/foss/designs/week12/stage_t1.sym} 500 -290 0 0 {name=x3}
-C {/foss/designs/week12/stage_t1.sym} 750 -290 0 0 {name=x4}
 C {devices/ipin.sym} 90 -130 0 0 {name=p1 lab=clkin}
 C {devices/ipin.sym} 90 -180 0 0 {name=p2 lab=res}
 C {devices/ipin.sym} 90 -290 0 0 {name=p3 lab=vin}
@@ -129,7 +120,7 @@ C {devices/ipin.sym} 90 -400 0 0 {name=p4 lab=vssa}
 C {devices/ipin.sym} 90 -420 0 0 {name=p5 lab=vdda}
 C {devices/ipin.sym} 90 -440 0 0 {name=p6 lab=vlo}
 C {devices/ipin.sym} 90 -460 0 0 {name=p7 lab=vhi}
-C {devices/opin.sym} 1130 -270 0 0 {name=p8 lab=dd}
+C {devices/opin.sym} 1235 -260 0 0 {name=p8 lab=dout}
 C {devices/lab_wire.sym} 600 -290 0 0 {name=p9 sig_type=std_logic lab=vout1}
 C {devices/lab_wire.sym} 850 -290 0 0 {name=p10 sig_type=std_logic lab=vout2}
 C {devices/lab_wire.sym} 850 -270 0 0 {name=p11 sig_type=std_logic lab=vmid2}
@@ -137,3 +128,7 @@ C {devices/lab_wire.sym} 340 -130 0 1 {name=p12 sig_type=std_logic lab=p1e}
 C {devices/lab_wire.sym} 340 -110 0 1 {name=p13 sig_type=std_logic lab=p1}
 C {devices/lab_wire.sym} 340 -90 0 1 {name=p14 sig_type=std_logic lab=p2}
 C {devices/lab_wire.sym} 340 -70 0 1 {name=p15 sig_type=std_logic lab=p2e}
+C {/foss/designs/layout/EE628_IDSM2/schematics/stage_t1.sym} 500 -290 0 0 {name=x1}
+C {/foss/designs/layout/EE628_IDSM2/schematics/stage_t1.sym} 750 -290 0 0 {name=x2}
+C {/foss/designs/layout/EE628_IDSM2/schematics/clk_generator_t1.sym} 170 -100 0 0 {name=x3}
+C {/foss/designs/layout/EE628_IDSM2/schematics/comp_t1.sym} 1010 -280 0 0 {name=x4}
