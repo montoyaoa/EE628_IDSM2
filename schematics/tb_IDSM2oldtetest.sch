@@ -68,7 +68,7 @@ C {devices/vsource.sym} 30 -290 0 0 {name=Vssd value="dc 0" savecurrent=false}
 C {devices/gnd.sym} 120 -240 0 0 {name=l3 lab=GND}
 C {devices/gnd.sym} 30 -240 0 0 {name=l4 lab=GND}
 C {devices/vdd.sym} 30 -340 0 0 {name=l10 lab=VSS}
-C {devices/vsource.sym} 210 -290 0 0 {name=Vres value="dc \{vdd\} pwl(0, \{vdd\}, \{per/2\}, \{vdd\}, \{per/2+25p\}, 0)" savecurrent=false}
+C {devices/vsource.sym} 210 -290 0 0 {name=Vres value="dc \{vdd\} pwl(0, \{vdd\}, \{per/4\}, \{vdd\}, \{per/4+50p\}, 0)" savecurrent=false}
 C {devices/gnd.sym} 210 -240 0 0 {name=l7 lab=GND}
 C {devices/vsource.sym} 30 -120 0 0 {name=Vssa value="dc 0" savecurrent=false}
 C {devices/vsource.sym} 120 -120 0 0 {name=Vdda value="dc \{vdd\}" savecurrent=false}
@@ -84,7 +84,7 @@ C {devices/lab_wire.sym} 210 -170 0 1 {name=p14 sig_type=std_logic lab=vlo}
 C {devices/lab_wire.sym} 120 -170 0 1 {name=p15 sig_type=std_logic lab=vdda}
 C {devices/lab_wire.sym} 30 -170 0 1 {name=p16 sig_type=std_logic lab=vssa}
 C {devices/vsource.sym} 390 -120 0 0 {name=Vin value="dc \{vin\}" savecurrent=false}
-C {devices/vsource.sym} 480 -120 0 0 {name=Vclk value="pulse(\{vdd\}, 0, \{per\}, 100p, 100p, \{0.5*per\}, \{per\})" savecurrent=false}
+C {devices/vsource.sym} 480 -120 0 0 {name=Vclk value="pulse(\{vdd\}, 0, \{per/2\}, 100p, 100p, \{0.5*per\}, \{per\})" savecurrent=false}
 C {devices/gnd.sym} 390 -70 0 0 {name=l5 lab=GND}
 C {devices/gnd.sym} 480 -70 0 0 {name=l6 lab=GND}
 C {devices/lab_wire.sym} 480 -170 0 1 {name=p1 sig_type=std_logic lab=clkin}
@@ -100,26 +100,16 @@ C {devices/lab_wire.sym} 930 -280 0 1 {name=p10 sig_type=std_logic lab=dout}
 C {devices/code_shown.sym} 980 -620 0 0 {name=COMMANDS only_toplevel=false value="
 .param temp=27 per=20n N=110
 .param vlo=0.3 vhi=0.9 vdd=1.2 vin=0.6
-.option method=gear reltol=1e-5
+.option method=gear2 reltol=1e-5
 .ic v(x1.x1.out1p)=0
 .tran 100p \{per*N\} uic
 .meas tran iavg_ana AVG i(Vdda)
 .meas tran iavg_dig AVG i(Vddd)
 
 .control
-set wr_singlescale
-set wr_vecnames
-option numdgt = 3
-let index = 1
-foreach vin_val 0.35 0.4 0.45 0.5 0.55 0.6 0.65 0.7 0.75 0.8 0.85
-  alterparam vin = $vin_val
-  reset
-  run
-  set file = \{tb_idsm2_\}\{$&index\}\{.txt\}
-  wrdata $file x1.vout1 x1.vout2 dout x1.p1 x1.p2
-  destroy $curplot
-  let index = index + 1
-end
+tran 100p 1u
+set color0 = white
+plot x1.vout1 x1.vout2
 .endc
 "}
 C {devices/code_shown.sym} 970 -120 0 0 {name=MODEL only_toplevel=true 
