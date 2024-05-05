@@ -1,0 +1,5 @@
+* Extracted by KLayout with SG13G2 LVS runset on : 04/05/2024 11:17
+
+* cell clk_generator_
+.SUBCKT clk_generator_
+.ENDS clk_generator_

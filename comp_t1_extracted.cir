@@ -1,0 +1,56 @@
+* Extracted by KLayout with SG13G2 LVS runset on : 05/05/2024 22:19
+
+* cell comp_t1
+* pin vinm
+* pin VSS
+* pin ps
+* pin VDD
+* pin vinp
+* pin D
+* pin vdda
+* pin pc
+* pin VSS
+.SUBCKT comp_t1 vinm VSS ps VDD vinp D vdda pc VSS$1
+* device instance $1 r0 *1 3.306,-7 sg13_lv_nmos
+M$1 VSS ps vinm VSS$1 sg13_lv_nmos W=2.0 L=0.13
+* device instance $2 r0 *1 3.301,-2.24 sg13_lv_nmos
+M$2 VSS vinp \$19 VSS$1 sg13_lv_nmos W=2.0 L=1.0
+* device instance $3 r0 *1 5.9,-2.24 sg13_lv_nmos
+M$3 VSS VSS \$20 VSS$1 sg13_lv_nmos W=2.0 L=1.0
+* device instance $4 r0 *1 15.971,-0.853 sg13_lv_nmos
+M$4 VSS$1 \$72 \$35 VSS$1 sg13_lv_nmos W=2.0 L=0.13
+* device instance $5 r0 *1 13.159,-0.827 sg13_lv_nmos
+M$5 VSS$1 \$33 \$34 VSS$1 sg13_lv_nmos W=2.0 L=0.13
+* device instance $6 r0 *1 5.9,-0.711 sg13_lv_nmos
+M$6 \$20 pc \$49 VSS$1 sg13_lv_nmos W=2.0 L=0.13
+* device instance $7 r0 *1 3.3,-0.707 sg13_lv_nmos
+M$7 \$19 pc \$48 VSS$1 sg13_lv_nmos W=2.0 L=0.13
+* device instance $8 r0 *1 13.143,0.216 sg13_lv_nmos
+M$8 \$34 \$66 \$65 VSS$1 sg13_lv_nmos W=2.0 L=0.13
+* device instance $9 r0 *1 15.972,0.217 sg13_lv_nmos
+M$9 \$35 \$68 D VSS$1 sg13_lv_nmos W=2.0 L=0.13
+* device instance $10 r0 *1 3.098,0.366 sg13_lv_nmos
+M$10 \$48 \$71 \$72 VSS$1 sg13_lv_nmos W=2.0 L=0.13
+* device instance $11 r0 *1 5.904,0.382 sg13_lv_nmos
+M$11 \$49 \$72 \$71 VSS$1 sg13_lv_nmos W=2.0 L=0.13
+* device instance $12 r0 *1 3.289,-10.005 sg13_lv_pmos
+M$12 VSS \$4 vinm \$11 sg13_lv_pmos W=6.0 L=0.13
+* device instance $15 r0 *1 17.031,1.842 sg13_lv_pmos
+M$15 D \$72 VDD \$94 sg13_lv_pmos W=4.0 L=0.13
+* device instance $16 r0 *1 2.11,1.854 sg13_lv_pmos
+M$16 \$72 \$71 vdda \$92 sg13_lv_pmos W=4.0 L=0.13
+* device instance $17 r0 *1 6.909,1.854 sg13_lv_pmos
+M$17 \$71 pc vdda \$64 sg13_lv_pmos W=4.0 L=0.13
+* device instance $18 r0 *1 12.007,1.854 sg13_lv_pmos
+M$18 \$65 D VDD \$64 sg13_lv_pmos W=4.0 L=0.13
+* device instance $19 r0 *1 17.031,3.272 sg13_lv_pmos
+M$19 D \$68 VDD \$94 sg13_lv_pmos W=4.0 L=0.13
+* device instance $20 r0 *1 2.11,3.284 sg13_lv_pmos
+M$20 \$72 pc vdda \$92 sg13_lv_pmos W=4.0 L=0.13
+* device instance $21 r0 *1 6.909,3.284 sg13_lv_pmos
+M$21 \$71 \$72 vdda \$64 sg13_lv_pmos W=4.0 L=0.13
+* device instance $22 r0 *1 12.007,3.284 sg13_lv_pmos
+M$22 \$65 \$71 VDD \$64 sg13_lv_pmos W=4.0 L=0.13
+* device instance $23 r0 *1 9.422,-13.155 cap_cmim
+C$23 \$2 VSS cap_cmim w=5.77 l=5.77 m=1
+.ENDS comp_t1

@@ -107,11 +107,16 @@ N 90 -460 470 -460 {
 lab=vhi}
 N 90 -130 100 -130 {
 lab=clkin}
-N 1180 -300 1180 -150 {}
-N 1160 -300 1180 -300 {}
-N 1200 -280 1200 -130 {}
-N 1160 -280 1200 -280 {}
-N 1160 -260 1235 -260 {}
+N 1180 -300 1180 -150 {
+lab=#net1}
+N 1160 -300 1180 -300 {
+lab=#net1}
+N 1200 -280 1200 -130 {
+lab=#net2}
+N 1160 -280 1200 -280 {
+lab=#net2}
+N 1160 -260 1235 -260 {
+lab=dout}
 C {devices/title.sym} 170 0 0 0 {name=l1 author="Alex Montoya"}
 C {devices/ipin.sym} 90 -130 0 0 {name=p1 lab=clkin}
 C {devices/ipin.sym} 90 -180 0 0 {name=p2 lab=res}
@@ -128,7 +133,7 @@ C {devices/lab_wire.sym} 340 -130 0 1 {name=p12 sig_type=std_logic lab=p1e}
 C {devices/lab_wire.sym} 340 -110 0 1 {name=p13 sig_type=std_logic lab=p1}
 C {devices/lab_wire.sym} 340 -90 0 1 {name=p14 sig_type=std_logic lab=p2}
 C {devices/lab_wire.sym} 340 -70 0 1 {name=p15 sig_type=std_logic lab=p2e}
-C {/foss/designs/layout/EE628_IDSM2/schematics/stage_t1.sym} 500 -290 0 0 {name=x1}
-C {/foss/designs/layout/EE628_IDSM2/schematics/stage_t1.sym} 750 -290 0 0 {name=x2}
-C {/foss/designs/layout/EE628_IDSM2/schematics/clk_generator_t1.sym} 170 -100 0 0 {name=x3}
-C {/foss/designs/layout/EE628_IDSM2/schematics/comp_t1.sym} 1010 -280 0 0 {name=x4}
+C {/foss/designs/layout/EE628_IDSM2/schematics/comp_t1.sym} 1010 -280 0 0 {name=x1}
+C {/foss/designs/layout/EE628_IDSM2/schematics/clk_generator_t1.sym} 170 -100 0 0 {name=x2}
+C {/foss/designs/layout/EE628_IDSM2/schematics/stage_t1.sym} 500 -290 0 0 {name=x3}
+C {/foss/designs/layout/EE628_IDSM2/schematics/stage_t1.sym} 750 -290 0 0 {name=x4}

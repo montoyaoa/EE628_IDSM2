@@ -1,16 +1,16 @@
 ** sch_path: /foss/designs/week12/IDSM2_t1.sch
 .subckt IDSM2_t1 vhi vlo vdda vssa vin dd res clkin
 *.PININFO clkin:I res:I vin:I vssa:I vdda:I vlo:I vhi:I dd:O
-x1 vdda p2 net1 net2 vmid2 dout vssa p1 res vout2 comp_t1
+x1 vdda p2 dd net1 vmid2 vssa p1 res vout2 comp_t1
 x2 p1e clkin p1 p2 p2e clk_generator_t1
-x3 res p1e p1 p2 vhi vdda vin vout1 vssa net2 net3 vlo stage_t1
+x3 res p1e p1 p2 vhi vdda vin vout1 vssa dd net2 vlo stage_t1
 x4 res p2e p2 p1 vhi vdda vout1 vout2 vssa net1 vmid2 vlo stage_t1
 .ends
 
 * expanding   symbol:  /foss/designs/week12/comp_t1.sym # of pins=9
 ** sym_path: /foss/designs/week12/comp_t1.sym
 ** sch_path: /foss/designs/week12/comp_t1.sch
-.subckt comp_t1 vdda pc d dd vinp dout vssa ps res vinm
+.subckt comp_t1 vdda pc d dd vinp vssa ps res vinm
 *.PININFO pc:I vinp:I ps:I vinm:I vdda:B vssa:B d:O dd:O res:I
 M4 vinm_samp ps vinm vssa sg13_lv_nmos L=0.13u W=2u ng=1 m=1
 M5 vinm_samp psb vinm vdda sg13_lv_pmos L=0.13u W=6u ng=3 m=1
@@ -37,7 +37,6 @@ M20 net4 out1m VSS VSS sg13_lv_nmos L=0.13u W=2u ng=1 m=1
 x1 net2 VDD VSS d sg13g2_buf_2
 x2 ps net2 dd net7 net6 VDD VSS sg13g2_dfrbp_2
 x4 res VDD VSS net6 sg13g2_inv_1
-x5 dd VDD VSS dout sg13g2_inv_2
 .ends
 
 
