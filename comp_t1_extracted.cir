@@ -1,56 +1,149 @@
-* Extracted by KLayout with SG13G2 LVS runset on : 05/05/2024 22:29
+* Extracted by KLayout with SG13G2 LVS runset on : 06/05/2024 02:10
 
 * cell comp_t1
 * pin vinm
 * pin VSS
 * pin ps
 * pin VDD
+* pin res
 * pin vinp
+* pin Q_N
+* pin Q,dd
+* pin d
 * pin D
 * pin vdda
 * pin pc
+* pin dout
 * pin VSS
-.SUBCKT comp_t1 vinm VSS ps VDD vinp D vdda pc VSS$1
-* device instance $1 r0 *1 3.306,-7 sg13_lv_nmos
-M$1 VSS ps vinm VSS$1 sg13_lv_nmos W=2.0 L=0.13
-* device instance $2 r0 *1 3.301,-2.24 sg13_lv_nmos
-M$2 VSS vinp \$19 VSS$1 sg13_lv_nmos W=2.0 L=1.0
-* device instance $3 r0 *1 5.9,-2.24 sg13_lv_nmos
-M$3 VSS VSS \$20 VSS$1 sg13_lv_nmos W=2.0 L=1.0
-* device instance $4 r0 *1 15.971,-0.853 sg13_lv_nmos
-M$4 VSS$1 \$72 \$35 VSS$1 sg13_lv_nmos W=2.0 L=0.13
-* device instance $5 r0 *1 13.159,-0.827 sg13_lv_nmos
-M$5 VSS$1 \$33 \$34 VSS$1 sg13_lv_nmos W=2.0 L=0.13
-* device instance $6 r0 *1 5.9,-0.711 sg13_lv_nmos
-M$6 \$20 pc \$49 VSS$1 sg13_lv_nmos W=2.0 L=0.13
-* device instance $7 r0 *1 3.3,-0.707 sg13_lv_nmos
-M$7 \$19 pc \$48 VSS$1 sg13_lv_nmos W=2.0 L=0.13
-* device instance $8 r0 *1 13.143,0.216 sg13_lv_nmos
-M$8 \$34 \$66 \$65 VSS$1 sg13_lv_nmos W=2.0 L=0.13
-* device instance $9 r0 *1 15.972,0.217 sg13_lv_nmos
-M$9 \$35 \$68 D VSS$1 sg13_lv_nmos W=2.0 L=0.13
-* device instance $10 r0 *1 3.098,0.366 sg13_lv_nmos
-M$10 \$48 \$71 \$72 VSS$1 sg13_lv_nmos W=2.0 L=0.13
-* device instance $11 r0 *1 5.904,0.382 sg13_lv_nmos
-M$11 \$49 \$72 \$71 VSS$1 sg13_lv_nmos W=2.0 L=0.13
-* device instance $12 r0 *1 3.289,-10.005 sg13_lv_pmos
-M$12 VSS \$4 vinm \$11 sg13_lv_pmos W=6.0 L=0.13
-* device instance $15 r0 *1 17.031,1.842 sg13_lv_pmos
-M$15 D \$72 VDD \$94 sg13_lv_pmos W=4.0 L=0.13
-* device instance $16 r0 *1 2.11,1.854 sg13_lv_pmos
-M$16 \$72 \$71 vdda \$92 sg13_lv_pmos W=4.0 L=0.13
-* device instance $17 r0 *1 6.909,1.854 sg13_lv_pmos
-M$17 \$71 pc vdda \$64 sg13_lv_pmos W=4.0 L=0.13
-* device instance $18 r0 *1 12.007,1.854 sg13_lv_pmos
-M$18 \$65 D VDD \$64 sg13_lv_pmos W=4.0 L=0.13
-* device instance $19 r0 *1 17.031,3.272 sg13_lv_pmos
-M$19 D \$68 VDD \$94 sg13_lv_pmos W=4.0 L=0.13
-* device instance $20 r0 *1 2.11,3.284 sg13_lv_pmos
-M$20 \$72 pc vdda \$92 sg13_lv_pmos W=4.0 L=0.13
-* device instance $21 r0 *1 6.909,3.284 sg13_lv_pmos
-M$21 \$71 \$72 vdda \$64 sg13_lv_pmos W=4.0 L=0.13
-* device instance $22 r0 *1 12.007,3.284 sg13_lv_pmos
-M$22 \$65 \$71 VDD \$64 sg13_lv_pmos W=4.0 L=0.13
-* device instance $23 r0 *1 9.422,-13.155 cap_cmim
-C$23 \$2 VSS cap_cmim w=5.77 l=5.77 m=1
+.SUBCKT comp_t1 vinm VSS ps VDD res vinp Q_N Q|dd d D vdda pc dout VSS$1
+* device instance $1 r0 *1 8.344,-10.624 sg13_lv_nmos
+M$1 VSS$1 ps \$4 VSS$1 sg13_lv_nmos W=0.74 L=0.13
+* device instance $2 r0 *1 3.3,-7 sg13_lv_nmos
+M$2 VSS ps vinm VSS$1 sg13_lv_nmos W=2.0 L=0.13
+* device instance $3 r0 *1 3.301,-2.24 sg13_lv_nmos
+M$3 VSS vinp \$18 VSS$1 sg13_lv_nmos W=2.0 L=1.0
+* device instance $4 r0 *1 5.9,-2.24 sg13_lv_nmos
+M$4 VSS VSS \$19 VSS$1 sg13_lv_nmos W=2.0 L=1.0
+* device instance $5 r0 *1 15.971,-0.853 sg13_lv_nmos
+M$5 VSS$1 \$71 \$34 VSS$1 sg13_lv_nmos W=2.0 L=0.13
+* device instance $6 r0 *1 13.159,-0.827 sg13_lv_nmos
+M$6 VSS$1 \$32 \$33 VSS$1 sg13_lv_nmos W=2.0 L=0.13
+* device instance $7 r0 *1 29.524,-1.041 sg13_lv_nmos
+M$7 \$26 D \$45 VSS$1 sg13_lv_nmos W=0.42 L=0.13
+* device instance $8 r0 *1 29.834,-1.041 sg13_lv_nmos
+M$8 \$45 \$20 VSS$1 VSS$1 sg13_lv_nmos W=0.42 L=0.13
+* device instance $9 r0 *1 30.414,-0.656 sg13_lv_nmos
+M$9 VSS$1 \$51 \$21 VSS$1 sg13_lv_nmos W=0.74 L=0.13
+* device instance $10 r0 *1 38.254,-1.041 sg13_lv_nmos
+M$10 \$27 \$28 VSS$1 VSS$1 sg13_lv_nmos W=0.42 L=0.13
+* device instance $11 r0 *1 38.764,-1.041 sg13_lv_nmos
+M$11 VSS$1 \$20 \$40 VSS$1 sg13_lv_nmos W=0.42 L=0.13
+* device instance $12 r0 *1 39.074,-1.041 sg13_lv_nmos
+M$12 \$40 \$37 \$28 VSS$1 sg13_lv_nmos W=0.42 L=0.13
+* device instance $13 r0 *1 5.9,-0.711 sg13_lv_nmos
+M$13 \$19 pc \$48 VSS$1 sg13_lv_nmos W=2.0 L=0.13
+* device instance $14 r0 *1 3.3,-0.707 sg13_lv_nmos
+M$14 \$18 pc \$47 VSS$1 sg13_lv_nmos W=2.0 L=0.13
+* device instance $15 r0 *1 31.504,-0.976 sg13_lv_nmos
+M$15 VSS$1 \$20 \$42 VSS$1 sg13_lv_nmos W=0.42 L=0.13
+* device instance $16 r0 *1 31.814,-0.976 sg13_lv_nmos
+M$16 \$42 \$21 \$35 VSS$1 sg13_lv_nmos W=0.42 L=0.13
+* device instance $17 r0 *1 41.114,-0.931 sg13_lv_nmos
+M$17 VSS$1 \$37 \$30 VSS$1 sg13_lv_nmos W=0.64 L=0.13
+* device instance $18 r0 *1 40.094,-0.881 sg13_lv_nmos
+M$18 VSS$1 \$37 Q_N VSS$1 sg13_lv_nmos W=1.48 L=0.13
+* device instance $20 r0 *1 42.134,-0.881 sg13_lv_nmos
+M$20 VSS$1 \$30 Q|dd VSS$1 sg13_lv_nmos W=1.48 L=0.13
+* device instance $22 r0 *1 28.269,-0.861 sg13_lv_nmos
+M$22 VSS$1 res \$20 VSS$1 sg13_lv_nmos W=0.74 L=0.13
+* device instance $23 r0 *1 36.669,-0.656 sg13_lv_nmos
+M$23 \$37 \$22 \$27 VSS$1 sg13_lv_nmos W=0.42 L=0.13
+* device instance $24 r0 *1 37.204,-0.816 sg13_lv_nmos
+M$24 \$21 \$36 \$37 VSS$1 sg13_lv_nmos W=0.74 L=0.13
+* device instance $25 r0 *1 34.359,-0.776 sg13_lv_nmos
+M$25 VSS$1 \$22 \$36 VSS$1 sg13_lv_nmos W=0.74 L=0.13
+* device instance $26 r0 *1 35.459,-0.776 sg13_lv_nmos
+M$26 VSS$1 ps \$22 VSS$1 sg13_lv_nmos W=0.74 L=0.13
+* device instance $27 r0 *1 32.589,-0.251 sg13_lv_nmos
+M$27 \$26 \$22 \$51 VSS$1 sg13_lv_nmos W=0.42 L=0.13
+* device instance $28 r0 *1 33.099,-0.251 sg13_lv_nmos
+M$28 \$51 \$36 \$35 VSS$1 sg13_lv_nmos W=0.42 L=0.13
+* device instance $29 r0 *1 13.143,0.216 sg13_lv_nmos
+M$29 \$33 \$65 \$64 VSS$1 sg13_lv_nmos W=2.0 L=0.13
+* device instance $30 r0 *1 15.972,0.217 sg13_lv_nmos
+M$30 \$34 \$67 D VSS$1 sg13_lv_nmos W=2.0 L=0.13
+* device instance $31 r0 *1 3.098,0.366 sg13_lv_nmos
+M$31 \$47 \$70 \$71 VSS$1 sg13_lv_nmos W=2.0 L=0.13
+* device instance $32 r0 *1 5.904,0.382 sg13_lv_nmos
+M$32 \$48 \$71 \$70 VSS$1 sg13_lv_nmos W=2.0 L=0.13
+* device instance $33 r0 *1 22.421,0.196 sg13_lv_nmos
+M$33 VSS$1 D \$49 VSS$1 sg13_lv_nmos W=0.64 L=0.13
+* device instance $34 r0 *1 22.931,0.146 sg13_lv_nmos
+M$34 VSS$1 \$49 d VSS$1 sg13_lv_nmos W=1.48 L=0.13
+* device instance $36 r0 *1 40.829,4.127 sg13_lv_nmos
+M$36 VSS$1 Q|dd dout VSS$1 sg13_lv_nmos W=1.48 L=0.13
+* device instance $38 r0 *1 3.289,-10.005 sg13_lv_pmos
+M$38 VSS \$4 vinm \$11 sg13_lv_pmos W=6.0 L=0.13
+* device instance $41 r0 *1 8.354,-8.949 sg13_lv_pmos
+M$41 VDD ps \$4 VDD sg13_lv_pmos W=1.12 L=0.13
+* device instance $42 r0 *1 37.614,0.534 sg13_lv_pmos
+M$42 \$37 \$36 \$77 VDD sg13_lv_pmos W=0.42 L=0.13
+* device instance $43 r0 *1 37.994,0.534 sg13_lv_pmos
+M$43 \$77 \$28 VDD VDD sg13_lv_pmos W=0.42 L=0.13
+* device instance $44 r0 *1 38.604,0.534 sg13_lv_pmos
+M$44 VDD \$20 \$28 VDD sg13_lv_pmos W=0.42 L=0.13
+* device instance $45 r0 *1 39.114,0.534 sg13_lv_pmos
+M$45 VDD \$37 \$28 VDD sg13_lv_pmos W=0.42 L=0.13
+* device instance $46 r0 *1 40.674,0.639 sg13_lv_pmos
+M$46 VDD \$37 \$30 VDD sg13_lv_pmos W=1.0 L=0.13
+* device instance $47 r0 *1 39.654,0.699 sg13_lv_pmos
+M$47 VDD \$37 Q_N VDD sg13_lv_pmos W=2.24 L=0.13
+* device instance $49 r0 *1 36.919,0.824 sg13_lv_pmos
+M$49 \$21 \$22 \$37 VDD sg13_lv_pmos W=1.0 L=0.13
+* device instance $50 r0 *1 29.414,0.549 sg13_lv_pmos
+M$50 VDD D \$26 VDD sg13_lv_pmos W=0.42 L=0.13
+* device instance $51 r0 *1 29.924,0.549 sg13_lv_pmos
+M$51 VDD \$20 \$26 VDD sg13_lv_pmos W=0.42 L=0.13
+* device instance $52 r0 *1 30.374,0.839 sg13_lv_pmos
+M$52 VDD \$51 \$21 VDD sg13_lv_pmos W=1.0 L=0.13
+* device instance $53 r0 *1 31.424,0.914 sg13_lv_pmos
+M$53 \$51 \$20 VDD VDD sg13_lv_pmos W=0.42 L=0.13
+* device instance $54 r0 *1 32.159,0.914 sg13_lv_pmos
+M$54 VDD \$21 \$82 VDD sg13_lv_pmos W=0.42 L=0.13
+* device instance $55 r0 *1 32.549,0.914 sg13_lv_pmos
+M$55 \$82 \$22 \$51 VDD sg13_lv_pmos W=0.42 L=0.13
+* device instance $56 r0 *1 33.059,0.914 sg13_lv_pmos
+M$56 \$51 \$36 \$26 VDD sg13_lv_pmos W=0.42 L=0.13
+* device instance $57 r0 *1 34.759,0.789 sg13_lv_pmos
+M$57 \$36 \$22 VDD VDD sg13_lv_pmos W=1.12 L=0.13
+* device instance $58 r0 *1 35.484,0.789 sg13_lv_pmos
+M$58 VDD ps \$22 VDD sg13_lv_pmos W=1.12 L=0.13
+* device instance $59 r0 *1 41.759,0.799 sg13_lv_pmos
+M$59 VDD \$30 Q|dd VDD sg13_lv_pmos W=2.24 L=0.13
+* device instance $61 r0 *1 28.279,0.814 sg13_lv_pmos
+M$61 VDD res \$20 VDD sg13_lv_pmos W=1.12 L=0.13
+* device instance $62 r0 *1 17.031,1.842 sg13_lv_pmos
+M$62 D \$71 VDD \$93 sg13_lv_pmos W=4.0 L=0.13
+* device instance $63 r0 *1 2.11,1.854 sg13_lv_pmos
+M$63 \$71 \$70 vdda \$91 sg13_lv_pmos W=4.0 L=0.13
+* device instance $64 r0 *1 6.909,1.854 sg13_lv_pmos
+M$64 \$70 pc vdda \$63 sg13_lv_pmos W=4.0 L=0.13
+* device instance $65 r0 *1 12.007,1.854 sg13_lv_pmos
+M$65 \$64 D VDD \$63 sg13_lv_pmos W=4.0 L=0.13
+* device instance $66 r0 *1 22.421,1.821 sg13_lv_pmos
+M$66 VDD D \$49 VDD sg13_lv_pmos W=1.0 L=0.13
+* device instance $67 r0 *1 22.931,1.806 sg13_lv_pmos
+M$67 VDD \$49 d VDD sg13_lv_pmos W=2.24 L=0.13
+* device instance $69 r0 *1 17.031,3.272 sg13_lv_pmos
+M$69 D \$67 VDD \$93 sg13_lv_pmos W=4.0 L=0.13
+* device instance $70 r0 *1 2.11,3.284 sg13_lv_pmos
+M$70 \$71 pc vdda \$91 sg13_lv_pmos W=4.0 L=0.13
+* device instance $71 r0 *1 6.909,3.284 sg13_lv_pmos
+M$71 \$70 \$71 vdda \$63 sg13_lv_pmos W=4.0 L=0.13
+* device instance $72 r0 *1 12.007,3.284 sg13_lv_pmos
+M$72 \$64 \$70 VDD \$63 sg13_lv_pmos W=4.0 L=0.13
+* device instance $73 r0 *1 40.819,5.787 sg13_lv_pmos
+M$73 VDD Q|dd dout VDD sg13_lv_pmos W=2.24 L=0.13
+* device instance $75 r0 *1 9.422,-13.155 cap_cmim
+C$75 \$2 VSS cap_cmim w=5.77 l=5.77 m=1
 .ENDS comp_t1
